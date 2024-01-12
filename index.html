@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>FOFORITO</title>
+</head>
+<body>
+    <section id="welcome">
+        <h1>FOFORITO</h1>
+        <div class="set-team">
+            <p>Anotá los puntos, boludito!</p>
+            <div class="team">
+                <input type="text" placeholder="Equipo 1">
+            </div>
+            <div class="team">
+                <input type="text" placeholder="Equipo 2">
+            </div>
+
+            <button class="button" id="play">Jugar</button>
+        </div>
+    </section>
+    <section id="header" style="display:none;">
+        <div class="title">
+            <a>FOFORITO</a>
+        </div>
+        <div class="scoreboard">
+            <p class = "score">0</p>
+            <div id = "gamemode">15</div>
+            <p class = "score">0</p>
+        </div>
+    </section>
+    <section id="main" style="display:none;">
+        <div class="gameboard">
+            <div class="player">
+                <button class="button">añadir punto</button>
+            </div>
+            <div class="player">
+                <button class="button">añadir punto</button>
+            </div>
+        </div>
+    </section>   
+    <script src="js/script.js"></script>
+</body>
+</html>
