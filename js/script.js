@@ -1,61 +1,75 @@
-$(document).ready(function() {
-    var isDocumentReady = true;
+// Funcion que carga los elementos del inicio
 
-    function start() {
-        $("#welcome")
-            .css("display", "flex")
-            .hide()
-            .fadeIn(4000);
-        $(".sub-title")
-            .css("display", "flex")
-            .hide()
-            .fadeIn(5500);
-        $("#inicio").delay(2000)
-            .css("display", "block")
-            .hide()
-            .fadeIn(4000);
-        $("#boton-inicio").delay(4000)
-            .css("display", "block")
-            .hide()
-            .fadeIn(1000);
+function start() {
+    $("#welcome")
+        .css("display", "flex")
+        .hide()
+        .fadeIn(2000);
+    $(".sub-title")
+        .css("display", "flex")
+        .hide()
+        .fadeIn(3500);
+    $("#inicio").delay(1000)
+        .css("display", "block")
+        .hide()
+        .fadeIn(2500);
+    $("#boton-inicio").delay(2000)
+        .css("display", "block")
+        .hide()
+        .fadeIn(1000);
+}
+
+// Ejecutamos start!
+
+start();
+
+const elementosInicio = $(".sub-title,#inicio,#boton-inicio")
+// Funcion boton INICIAR
+
+$("#boton-inicio").click(function() {
+    elementosInicio.fadeOut(1500);
+    setTimeout(function(){
+        elementosInicio.css("display","none");
+        $(".set-team")
+        .css("display","flex")
+        .hide()
+        .fadeIn(600);
+    },2000);
+});
+
+// Form Equipos
+var team1,team2;
+
+$("#formEquipos").submit(function(){
+    var team1 = $("#team-1").val();
+    var team2 = $("#team-2").val();
+    var equipos = []
+    if(team1 == ""){
+        var team1 = "EQUIPO 1"
+    }
+    if(team2==""){
+        var team2 = "EQUIPO 2"
     }
 
-    // Ejecutar la función start al cargar la página
-    start();
+    equipos.push(team1);
+    equipos.push(team2);
+    console.log(equipos);
 
-    // Manejar el evento click en cualquier parte del documento
-    $(document).on("click", function() {
-        if (isDocumentReady) {
-            // Si la función start está en curso, detenerla y mostrar todo con fadeIn rápido
-            $("#welcome, .sub-title, #inicio, #boton-inicio").stop(true, true).fadeIn(100);
-        }
-    });
+    $(".set-points")
+        .css("display","flex")
+        .hide()
+        .fadeIn(1000);
 });
 
-$("#boton-inicio").click(function(){
-    $("#boton-inicio")
-        .fadeOut(1000)
-        .css("display","hidden")
-    $("#inicio").delay(1000)
-        .fadeOut(1000)
-        .css("display","hidden")
-    $(".sub-title").delay(1200)
-        .fadeOut(1000)
-        .css("display","hidden")
+var puntos;
+
+$(".points").click(function(){
+    puntos = parseInt($(this).text());
+    console.log("Partida a "+ puntos + " puntos")
+    $(".set-team").fadeOut(1000);
+    $(".set-points").fadeOut(1000);
+    setTimeout(function(){
+        $(".set-team").css("display","none");
+        $(".set-points").css("display","none");
+    },2000)
 })
-
-
-$("#play").click(function() {
-    $("#welcome").fadeOut("slow",function(){
-        $("#welcome").css('display', 'none');
-    });
-    function fadeInMain(){
-        $("#main").fadeIn("slow",function(){
-            $("#main").css('display', 'block');
-        });
-        $("#header").fadeIn("slow",function(){
-            $("#header").css('display', 'block');
-        });
-    };
-    setTimeout(fadeInMain, 1000);
-});

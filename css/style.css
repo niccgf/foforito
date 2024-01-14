@@ -1,4 +1,9 @@
 /* Mobile-first styles */
+
+html{
+  box-sizing: border-box;
+}
+
 body {
     font-size: 16px;
     background-color: #f0f0f0;
@@ -11,10 +16,11 @@ body {
     font-family: "Caprasimo", serif;
     font-weight: 400;
     font-style: normal;
+    overflow: hidden;
 }
 
 #welcome{
-    margin-top:35%;
+    margin-top:25%;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -27,91 +33,147 @@ body {
     text-shadow: 5px 5px rgba(255, 255, 255, 1);
 }
 
+.sub-title{
+  font-size:25px;
+  padding:2% 5% 2% 5%;
+  background-color: #C7B299;
+  color:rgb(255, 255, 255);
+  border-radius:25px;
+}
+
+.sub-title p{
+  text-shadow: 2px 2px rgb(66, 66, 66);
+}
+
+#inicio{
+  position:absolute;
+  top:50%;
+}
+
+#inicio #fosforo{
+  max-height: 600px;
+}
+
+#boton-inicio{
+  background-color: #F15A24;
+  font-size:40px;
+  padding: 2% 5% 2% 5%;
+  color:white;
+  position:absolute;
+  z-index: 9999;
+  bottom:5%;
+  height:fit-content;
+  border-radius:15px;
+  -webkit-animation: breathing 2s ease-out infinite normal;
+  animation: breathing 2s ease-out infinite normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+#boton-inicio p{
+  margin:0%;
+  text-shadow:#C7B299 2px 2px;
+}
+
 #welcome .set-team{
     display:flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
-}
-
-.sub-title{
-    font-size:25px;
-    padding:2% 5% 2% 5%;
     background-color: #C7B299;
-    color:rgb(255, 255, 255);
-    border-radius:25px;
-}
-
-.sub-title p{
-    text-shadow: 2px 2px rgb(66, 66, 66);
-}
-
-#inicio{
-    position:absolute;
-    top:50%;
-}
-
-#inicio #fosforo{
-    max-height: 600px;
-}
-
-#boton-inicio{
-    background-color: #F15A24;
+    padding:0% 20% 0% 20%;
+    gap: 10px;
+    border-radius:20px;
+    box-shadow: #7a6953 3px 3px;
     font-size:40px;
-    padding: 2% 5% 2% 5%;
-    color:white;
-    position:absolute;
-    z-index: 9999;
-    bottom:5%;
-    height:fit-content;
-    border-radius:15px;
-    -webkit-animation: breathing 2s ease-out infinite normal;
-    animation: breathing 2s ease-out infinite normal;
-    -webkit-font-smoothing: antialiased;
+    text-shadow:#f0f0f0 1.5px 1.5px;
+    text-align:center;
 }
 
-#boton-inicio p{
-    margin:0%;
-    text-shadow:#C7B299 2px 2px;
+#welcome .set-team p{
+  margin-bottom:5%;
 }
 
-#header{
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    display:fle x;
-    flex-direction: column;
+#welcome .set-team #formEquipos{
+  display:flex;
+  gap:10px;
+  flex-direction: column;
 }
-#header .title{
-    flex:1;
-    background-color: red;
-    color:white;
+
+#welcome .set-team .team-input{
+  border-radius:10px;
+  padding: 5% 10% 5% 10%;
+  width:200px;
+  height:60px;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #DB8653;
+  font-size:25px;
+  letter-spacing: 1.5px;
+  font-family: "Caprasimo", serif;
+  text-transform: uppercase;
+  border: transparent;
+  box-shadow:2px 2px #85591f;
+}
+
+#welcome .set-team .accept{
+  padding: 5%;
+}
+
+#welcome .set-team .accept #greenCheck{
+  border-radius: 50%;
+  box-shadow:#85591f 1px 1px;
+}
+
+::placeholder{
+  color:#e6e1db;
 }
 
 
-#header .scoreboard{
-    flex:1;
-    background-color: green;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
+
+#welcome .set-points{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #C7B299;
+  padding:5% 20% 5% 20%;
+  gap: 10px;
+  border-radius:20px;
+  box-shadow: #7a6953 3px 3px;
+  font-size:40px;
+  text-shadow:#f0f0f0 1.5px 1.5px;
+  text-align:center;
+  margin-top:20%;
+  justify-content: center;
+  height:150px;
+  width:auto;
 }
 
-#main {
-    padding: 20px;
-    display:flex;
-    flex-direction: column;
+#welcome .set-points p{
+  margin-top:10%;
+  margin-bottom:5%;
 }
 
-#main .gameboard{
-    flex:1;
-    background-color: blue;
-    color:white;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
+#welcome .set-points .point-placeholder{
+  display:flex;
+  gap:20px;
+  justify-content: center;
 }
+
+#welcome .set-points .point-placeholder .points{
+  border-radius:10px;
+  padding:5% 20% 5% 20%;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #DB8653;
+  font-size:35px;
+  letter-spacing: 1.5px;
+  font-family: "Caprasimo", serif;
+  text-transform: uppercase;
+  border: transparent;
+  box-shadow:2px 2px #85591f;
+  color:#e6e1db;
+  text-shadow:#7a6953 2px 2px;
+}
+
 
 /* Animacion de respiracion */
 

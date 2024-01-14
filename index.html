@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,36 +24,28 @@
             <p>INICIAR</p>
         </div>
         <div class="set-team" style="display:none;">
-            <p>Anotá los puntos, boludito!</p>
-            <div class="team">
-                <input type="text" placeholder="Equipo 1">
+            <p>EQUIPOS</p>
+            <form id = "formEquipos" onsubmit="return false">
+                <div class="team">
+                    <input type="text" placeholder="EQUIPO 1" id="team-1" class="team-input" maxlength="6">
+                </div>
+                <div class="team">
+                    <input type="text" placeholder="EQUIPO 2" id="team-2" class="team-input" maxlength="6">
+                </div>
+                <div class="accept">
+                    <input id="greenCheck" name="submit" type=image src="./assets/green_check.svg" height="50px" width="auto" alt="Submit">
+                </div>
+            </form>
+        </div>
+        <div class="set-points" style="display:none;">
+            <p>PUNTOS</p>
+            <div class="point-placeholder">
+                <div class="points">15</div>
+                <div class="points">30</div>
             </div>
-            <div class="team">
-                <input type="text" placeholder="Equipo 2">
-            </div>
-
-            <button class="button" id="play">Jugar</button>
         </div>
     </section>
     <section id="header" style="display:none;">
-        <div class="title">
-            <a>FOFORITO</a>
-        </div>
-        <div class="scoreboard">
-            <p class = "score">0</p>
-            <div id = "gamemode">15</div>
-            <p class = "score">0</p>
-        </div>
-    </section>
-    <section id="main" style="display:none;">
-        <div class="gameboard">
-            <div class="player">
-                <button class="button">añadir punto</button>
-            </div>
-            <div class="player">
-                <button class="button">añadir punto</button>
-            </div>
-        </div>
     </section>   
     <script src="js/script.js"></script>
 </body>
